@@ -86,19 +86,19 @@ Now, log in to your Snyk account and navigate to your Organization assigned to y
 
 `Select Integrations link`
 
-![alt tag](https://i.ibb.co/FKtXDK1/snyk-k8s-workshop-2.png)
+![alt tag-2](https://i.ibb.co/FKtXDK1/snyk-k8s-workshop-2.png)
 
 `Search for "Kubernetes" and click on the tile`
 
-![alt tag](https://i.ibb.co/x5FyLdr/snyk-k8s-workshop-3.png)
+![alt tag-3](https://i.ibb.co/x5FyLdr/snyk-k8s-workshop-3.png)
 
 `Click "Connect" to enable the integration`
 
-![alt tag](https://i.ibb.co/7NhZRny/snyk-k8s-workshop-4.png)
+![alt tag-4](https://i.ibb.co/7NhZRny/snyk-k8s-workshop-4.png)
 
 Copy the integration ID as we will need it soon
 
-![alt tag](https://i.ibb.co/f9yNC8R/snyk-k8s-workshop-5.png)
+![alt tag-5](https://i.ibb.co/f9yNC8R/snyk-k8s-workshop-5.png)
 
 ## Install the Snyk Controller into your K8s cluster
 
