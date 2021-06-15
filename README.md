@@ -100,7 +100,7 @@ Instructions link - https://support.snyk.io/hc/en-us/articles/360006368657-Viewi
 
 `Copy the integration ID as we will need it soon`
 
-<img src="https://i.ibb.co/f9yNC8R/snyk-k8s-workshop-5.png" alt="img5" width="550" height="100%" />
+<img src="https://i.ibb.co/f9yNC8R/snyk-k8s-workshop-5.png" alt="img5" width="550" height="" />
 
 ## Install the Snyk Controller into your K8s cluster
 
