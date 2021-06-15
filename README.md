@@ -88,7 +88,7 @@ Instructions - https://support.snyk.io/hc/en-us/articles/360006368657-Viewing-yo
 
 `Select Integrations link`
 
-<img alt="img2" src="https://i.ibb.co/FKtXDK1/snyk-k8s-workshop-2.png" width="640" height="480" />
+<img alt="img2" src="https://i.ibb.co/FKtXDK1/snyk-k8s-workshop-2.png"></image>
 
 `Search for "Kubernetes" and click on the tile`
 
