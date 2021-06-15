@@ -11,15 +11,28 @@ In this **hands-on** demo we will achieve the follow
 * Deploy some applications to you K8s cluster
 * Monitor those applications from the Snyk Platform
 
-You will be invited into an organization on the Snyk Platform prior to running this workshop. This is the organization you will use for the workshop. The following is an example ORG within the Snyk Platform
+## Prerequisites
 
-![alt tag](https://i.ibb.co/vsYSnX7/snyk-k8s-workshop-1.png)
+* kubectl - https://github.com/cloudfoundry/cli
+* helm3 installed - https://helm.sh/docs/intro/install/
 
 # Workshop Steps
 
-Note: It is assumed your using a mac for these steps but it should also work on windows or linux
+_Note: It is assumed your using a mac for these steps but it should also work on windows or linux_
+
+You will be invited into an organization on the Snyk Platform prior to running this workshop. This is the organization you will use for the workshop. The following is an example ORG within the Snyk Platform
+
+<img src="https://i.ibb.co/vsYSnX7/snyk-k8s-workshop-1.png" alt="img1" width="450" />
 
 ## Install a k3d K8s cluster on your local machine
+
+Install k3d using the instructions from the link here - https://k3d.io/
+
+```
+$ k3d --version
+k3d version v4.4.1
+k3s version latest (default)
+```
 
 
 ## Obtain a Kubernetes Integration Token from Snyk
