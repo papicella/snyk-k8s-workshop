@@ -17,7 +17,16 @@ spec:
           image: pasapples/spring-boot-jib
           ports:
           - containerPort: 8080
-
+          securityContext:
+            runAsUser: 1000
+            allowPrivilegeEscalation: false
+          resources:
+            requests:
+              memory: "800Mi"
+              cpu: "500m"
+            limits:
+              memory: "1024Mi"
+              cpu: "750m"
 ---
 apiVersion: v1
 kind: Service
