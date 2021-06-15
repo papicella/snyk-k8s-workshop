@@ -84,8 +84,6 @@ $ helm repo add snyk-charts https://snyk.github.io/kubernetes-monitor/
 
 Now, log in to your Snyk account and navigate to your Organization assigned to you at the start of the labs, click on Integrations. Search for and click Kubernetes. Click Connect from the page that loads, copy the Integration ID. The Snyk Integration ID is a UUID, similar to this format: abcd1234-abcd-1234-abcd-1234abcd1234. Save it for use from your Kubernetes environment in the next step
 
-Instructions link - https://support.snyk.io/hc/en-us/articles/360006368657-Viewing-your-Kubernetes-integration-settings
-
 `Select Integrations link`
 
 ![alt tag](https://i.ibb.co/FKtXDK1/snyk-k8s-workshop-2.png)
