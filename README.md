@@ -88,15 +88,15 @@ Instructions link - https://support.snyk.io/hc/en-us/articles/360006368657-Viewi
 
 `Select Integrations link`
 
-<img src="https://i.ibb.co/FKtXDK1/snyk-k8s-workshop-2.png" alt="img2" width="550" />
+![alt tag](https://i.ibb.co/FKtXDK1/snyk-k8s-workshop-2.png)
 
 `Search for "Kubernetes" and click on the tile`
 
-<img src="https://i.ibb.co/x5FyLdr/snyk-k8s-workshop-3.png" alt="img3" width="550"  />
+![alt tag](https://i.ibb.co/x5FyLdr/snyk-k8s-workshop-3.png)
 
 `Click "Connect" to enable the integration`
 
-<img src="https://i.ibb.co/7NhZRny/snyk-k8s-workshop-4.png" alt="img4" width="550" />
+![alt tag](https://i.ibb.co/7NhZRny/snyk-k8s-workshop-4.png)
 
 Copy the integration ID as we will need it soon
 
