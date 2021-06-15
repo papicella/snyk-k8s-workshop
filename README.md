@@ -98,7 +98,7 @@ Instructions link - https://support.snyk.io/hc/en-us/articles/360006368657-Viewi
 
 <img src="https://i.ibb.co/7NhZRny/snyk-k8s-workshop-4.png" alt="img4" width="550" />
 
-`Copy the integration ID as we will need it soon`
+Copy the integration ID as we will need it soon
 
 ![alt tag](https://i.ibb.co/f9yNC8R/snyk-k8s-workshop-5.png)
 
