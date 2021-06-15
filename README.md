@@ -74,6 +74,13 @@ k3d-snyk-k8s-workshop-agent-0    Ready    <none>                 3m28s   v1.20.5
 k3d-snyk-k8s-workshop-agent-1    Ready    <none>                 3m19s   v1.20.5+k3s1
 ```
 
+Run the following command in order to add the Snyk Charts repository to Helm
+
+```bash
+$ helm repo add snyk-charts https://snyk.github.io/kubernetes-monitor/
+"snyk-charts" already exists with the same configuration, skipping
+```
+
 ## Obtain a Kubernetes Integration Token from Snyk
 
 
