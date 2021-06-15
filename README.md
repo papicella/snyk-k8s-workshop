@@ -92,15 +92,15 @@ Instructions link - https://support.snyk.io/hc/en-us/articles/360006368657-Viewi
 
 `Search for "Kubernetes" and click on the tile`
 
-<img src="https://i.ibb.co/x5FyLdr/snyk-k8s-workshop-3.png" alt="img2" width="500" />
+<img src="https://i.ibb.co/x5FyLdr/snyk-k8s-workshop-3.png" alt="img3" width="500" />
 
-Click "Connect" to enable the integration
+`Click "Connect" to enable the integration`
 
-<img src="https://i.ibb.co/7NhZRny/snyk-k8s-workshop-4.png" alt="img2" width="500" />
+<img src="https://i.ibb.co/7NhZRny/snyk-k8s-workshop-4.png" alt="img4" width="500" />
 
 `Copy the integration ID as we will need it soon`
 
-<img src="https://i.ibb.co/f9yNC8R/snyk-k8s-workshop-5.png" alt="img2" width="500" />
+<img src="https://i.ibb.co/f9yNC8R/snyk-k8s-workshop-5.png" alt="img5" width="500" />
 
 ## Install the Snyk Controller into your K8s cluster
 
