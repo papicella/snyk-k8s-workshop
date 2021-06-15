@@ -23,7 +23,7 @@ _Note: It is assumed your using a mac for these steps but it should also work on
 
 You will be invited into an organization on the Snyk Platform prior to running this workshop. This is the organization you will use for the workshop. The following is an example ORG within the Snyk Platform
 
-<img src="https://i.ibb.co/vsYSnX7/snyk-k8s-workshop-1.png" alt="img1" width="500" height="100%" />
+![alt tag](https://i.ibb.co/vsYSnX7/snyk-k8s-workshop-1.png)
 
 ## Install a k3d K8s cluster on your local machine
 
@@ -88,15 +88,15 @@ Instructions link - https://support.snyk.io/hc/en-us/articles/360006368657-Viewi
 
 `Select Integrations link`
 
-<img src="https://i.ibb.co/FKtXDK1/snyk-k8s-workshop-2.png" alt="img2" width="550" height="100%" />
+<img src="https://i.ibb.co/FKtXDK1/snyk-k8s-workshop-2.png" alt="img2" width="550" />
 
 `Search for "Kubernetes" and click on the tile`
 
-<img src="https://i.ibb.co/x5FyLdr/snyk-k8s-workshop-3.png" alt="img3" width="550" height="100%" />
+<img src="https://i.ibb.co/x5FyLdr/snyk-k8s-workshop-3.png" alt="img3" width="550"  />
 
 `Click "Connect" to enable the integration`
 
-<img src="https://i.ibb.co/7NhZRny/snyk-k8s-workshop-4.png" alt="img4" width="550" height="250" />
+<img src="https://i.ibb.co/7NhZRny/snyk-k8s-workshop-4.png" alt="img4" width="550" />
 
 `Copy the integration ID as we will need it soon`
 
