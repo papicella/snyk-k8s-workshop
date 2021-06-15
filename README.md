@@ -195,10 +195,11 @@ $ ./get-snyk-monitor-logs.sh
 
 ## Deploy some applications to you K8s cluster
 
+TODO://
 
 ## Monitor those applications from the Snyk Platform
 
-
+TODO://
 
 <hr />
 Pas Apicella [pas at snyk.io] is an Solution Engineer at Snyk APJ 
