@@ -13,9 +13,9 @@ In this **hands-on** demo we will achieve the follow
 
 ## Prerequisites
 
-* kubectl - https://github.com/cloudfoundry/cli
+* kubectl - https://kubernetes.io/docs/tasks/tools/
 * helm3 installed - https://helm.sh/docs/intro/install/
-
+* 
 # Workshop Steps
 
 _Note: It is assumed your using a mac for these steps but it should also work on windows or linux_
