@@ -195,11 +195,66 @@ $ ./get-snyk-monitor-logs.sh
 
 ## Deploy some applications to you K8s cluster
 
-TODO://
+Deploy two java applications as follows
+
+```bash
+$ kubectl apply -f msa-apifirst.yaml
+deployment.apps/msa-apifirst created
+service/msa-apifirst-service created
+
+$ kubectl apply -f springboot-jib.yaml
+deployment.apps/spring-boot-jib created
+service/spring-boot-jib-service created
+```
+
+Verify they are running before you move onto the next step
+
+```bash
+$ kubectl get all
+NAME                                  READY   STATUS    RESTARTS   AGE
+pod/msa-apifirst-77cf47f585-7jxtg     1/1     Running   0          96s
+pod/spring-boot-jib-95dff9874-4pvqv   1/1     Running   0          88s
+
+NAME                              TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+service/kubernetes                ClusterIP   10.43.0.1       <none>        443/TCP        18h
+service/msa-apifirst-service      NodePort    10.43.205.170   <none>        80:31310/TCP   96s
+service/spring-boot-jib-service   NodePort    10.43.195.150   <none>        81:31830/TCP   88s
+
+NAME                              READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/msa-apifirst      1/1     1            1           96s
+deployment.apps/spring-boot-jib   1/1     1            1           88s
+
+NAME                                        DESIRED   CURRENT   READY   AGE
+replicaset.apps/msa-apifirst-77cf47f585     1         1         1       96s
+replicaset.apps/spring-boot-jib-95dff9874   1         1         1       88s
+```
 
 ## Monitor those applications from the Snyk Platform
 
-TODO://
+Click on the "**Integrations**" link and then click on the "**Kubernetes**" tile which should show you those two deployments you added to the K8s cluster in the last step
+
+![alt tag](https://i.ibb.co/Qmf88vZ/snyk-k8s-workshop-6.png)
+
+Add both deployments as shown below by clicking on "**Add selected workloads**"
+
+![alt tag](https://i.ibb.co/MPtm0kt/snyk-k8s-workshop-7.png)
+
+Verify both projects were imported
+
+_Note: Ignore the import warning_
+
+![alt tag](https://i.ibb.co/qBcRJrx/snyk-k8s-workshop-8.png)
+
+Click on "default/deployment.apps/spring-boot-jib" as showb below
+
+![alt tag](https://i.ibb.co/r5WgN5k/snyk-k8s-workshop-9.png)
+
+Notice how we are shown details about the "Security Configuration" of our deployment which we defined in your YML files for deployment. Take a look at the two YML files we used to deploy our application 
+
+1. msa-apifirst.yaml
+2. springboot-jib.yaml
+
+![alt tag](https://i.ibb.co/M7dhJjg/snyk-k8s-workshop-10.png)
 
 <hr />
 Pas Apicella [pas at snyk.io] is an Solution Engineer at Snyk APJ 
