@@ -9,6 +9,7 @@ In this **hands-on** demo we will achieve the follow
 * [Install the Snyk Controller into your K8s cluster](#install-the-snyk-controller-into-your-k8s-cluster)
 * [Deploy some applications to you K8s cluster](#deploy-some-applications-to-you-k8s-cluster)
 * [Monitor those applications from the Snyk Platform](#monitor-those-applications-from-the-snyk-platform)
+* [Auto adding workloads into the Snyk Platform](#auto-adding-workloads-into-the-snyk-platform)
 
 ## Prerequisites
 
@@ -296,6 +297,48 @@ Project path:      springboot-jib.yaml
 
 Tested springboot-jib.yaml for known issues, found 6 issues
 ```
+
+## Auto adding workloads into the Snyk Platform
+
+Importing your Kubernetes application from the Snyk Platform works well but potentially you will want to auto import workloads as they ae deployed to Kubernetes which can be done using the steps below
+
+Retrieve your organisation ID from the Snyk Platform by clicking on "**Settings**" and then copying your ID 
+
+![alt tag](https://i.ibb.co/Yyh083R/snyk-k8s-workshop-11.png)
+
+You will find a Kubernetes YML file named "**person-K8s.yaml**" open it up and add your organisation ID from above as indicated below by replacing "**ORG_ID_HERE**"
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: snyk-person-api
+  annotations:
+    orgs.k8s.snyk.io/v1: ORG_ID_HERE
+```
+
+Deploy as follows and wait for the POD from the Deploym ent to be up and running 
+
+```bash
+$ kubectl apply -f person-K8s.yaml
+deployment.apps/snyk-person-api created
+service/snyk-person-api-lb created
+
+$ kubectl get pods
+NAME                               READY   STATUS    RESTARTS   AGE
+msa-apifirst-77cf47f585-7jxtg      1/1     Running   0          84m
+spring-boot-jib-95dff9874-4pvqv    1/1     Running   0          84m
+snyk-person-api-756d9c5dbc-rmhnw   1/1     Running   0          49s
+```
+
+After a few minutes we should see the person API workload appear in the Snyk Platform as shown below
+
+![alt tag](https://i.ibb.co/Cv9b5N7/snyk-k8s-workshop-12.png)
+![alt tag](https://i.ibb.co/kXPGSYt/snyk-k8s-workshop-13.png)
+
+Thanks for attending and completing this workshop
+
+![alt tag](https://i.ibb.co/7tnp1B6/snyk-logo.png)
 
 <hr />
 Pas Apicella [pas at snyk.io] is an Solution Engineer at Snyk APJ 
