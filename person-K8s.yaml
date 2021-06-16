@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: snyk-person-api
   annotations:
-    orgs.k8s.snyk.io/v1: e31be23e-a59f-476d-b861-f0871a1fc011
+    orgs.k8s.snyk.io/v1: ORG_ID_HERE
 spec:
   selector:
     matchLabels:
