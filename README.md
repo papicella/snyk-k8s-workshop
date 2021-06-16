@@ -5,10 +5,10 @@ Snyk integrates with Kubernetes, enabling you to import and test your running wo
 In this **hands-on** demo we will achieve the follow
 
 * [Install a k3d K8s cluster on your local machine](#install-a-k3d-k8s-cluster-on-your-local-machine)
-* Obtain a Kubernetes Integration Token from Snyk
-* Install the Snyk Controller into your K8s cluster
-* Deploy some applications to you K8s cluster
-* Monitor those applications from the Snyk Platform
+* [Obtain a Kubernetes Integration Token from Snyk](#obtain-a-kubernetes-integration-token-from-snyk)
+* [Install the Snyk Controller into your K8s cluster](#install-the-snyk-controller-into-your-k8s-cluster)
+* [Deploy some applications to you K8s cluster](#deploy-some-applications-to-you-k8s-cluster)
+* [Monitor those applications from the Snyk Platform](#monitor-those-applications-from-the-snyk-platform)
 
 ## Prerequisites
 
@@ -16,10 +16,11 @@ In this **hands-on** demo we will achieve the follow
 * helm3 installed - https://helm.sh/docs/intro/install/
 * k3d - https://k3d.io/
 * Docker Desktop - https://www.docker.com/products/docker-desktop
+* snyk CLI - https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI
 
 # Workshop Steps
 
-_Note: It is assumed your using a mac for these steps but it should also work on windows or linux_
+_Note: It is assumed your using a mac for these steps but it should also work on windows or linux with some modifications to the scripts potentially_
 
 You will be invited into an organization on the Snyk Platform prior to running this workshop. This is the organization you will use for the workshop. The following is an example ORG within the Snyk Platform
 
@@ -255,6 +256,46 @@ Notice how we are shown details about the "Security Configuration" of our deploy
 2. springboot-jib.yaml
 
 ![alt tag](https://i.ibb.co/M7dhJjg/snyk-k8s-workshop-10.png)
+
+You can also test your Kubernetes YML files using "**snyk iac test**" as follows from the snyk cli as shown below. 
+
+_Note: If you include your Kubernetes config YML files in your Source Code Management system they can also get scanned in the UI of Snyk Platform itself_
+
+```bash
+$ snyk iac test springboot-jib.yaml
+
+Testing springboot-jib.yaml...
+
+
+Infrastructure as code issues:
+  ✗ Container does not drop all default capabilities [Medium Severity] [SNYK-CC-K8S-6] in Deployment
+    introduced by input > spec > template > spec > containers[spring-boot-jib] > securityContext > capabilities > drop
+
+  ✗ Container could be running with outdated image [Low Severity] [SNYK-CC-K8S-42] in Deployment
+    introduced by spec > template > spec > containers[spring-boot-jib] > imagePullPolicy
+
+  ✗ Container's UID could clash with host's UID [Low Severity] [SNYK-CC-K8S-11] in Deployment
+    introduced by input > spec > template > spec > containers[spring-boot-jib] > securityContext > runAsUser
+
+  ✗ Container is running without liveness probe [Low Severity] [SNYK-CC-K8S-41] in Deployment
+    introduced by spec > template > spec > containers[spring-boot-jib] > livenessProbe
+
+  ✗ Container is running without AppArmor profile [Low Severity] [SNYK-CC-K8S-32] in Deployment
+    introduced by metadata > annotations['container > apparmor > security > beta > kubernetes > io/spring-boot-jib']
+
+  ✗ Container is running with writable root filesystem [Low Severity] [SNYK-CC-K8S-8] in Deployment
+    introduced by input > spec > template > spec > containers[spring-boot-jib] > securityContext > readOnlyRootFilesystem
+
+
+Organization:      pas.apicella-41p
+Type:              Kubernetes
+Target file:       springboot-jib.yaml
+Project name:      snyk-k8s-workshop
+Open source:       no
+Project path:      springboot-jib.yaml
+
+Tested springboot-jib.yaml for known issues, found 6 issues
+```
 
 <hr />
 Pas Apicella [pas at snyk.io] is an Solution Engineer at Snyk APJ 
