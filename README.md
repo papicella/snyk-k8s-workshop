@@ -23,6 +23,8 @@ In this **hands-on** demo we will achieve the follow
 
 _Note: It is assumed your using a mac for these steps but it should also work on windows or linux with some modifications to the scripts potentially_
 
+Please ensure Docker desktop is running you need it to complete these steps. 
+
 You will be invited into an organization on the Snyk Platform prior to running this workshop. This is the organization you will use for the workshop. The following is an example ORG within the Snyk Platform
 
 ![alt tag](https://i.ibb.co/c8BhLYg/snyk-k8s-workshop-1.png)
@@ -79,7 +81,7 @@ Run the following command in order to add the Snyk Charts repository to Helm
 
 ```bash
 $ helm repo add snyk-charts https://snyk.github.io/kubernetes-monitor/
-"snyk-charts" already exists with the same configuration, skipping
+"snyk-charts" has been added to your repositories
 ```
 
 ## Obtain a Kubernetes Integration Token from Snyk
@@ -152,7 +154,9 @@ REVISION: 1
 TEST SUITE: None
 ```
 
-Verify the snyk controller is running without an error
+Verify the snyk controller is running without an error.
+
+_Note: This can take up to 2 minutes so please wiat for this to be running as shown below_
 
 ```bash
 $ kubectl get all -n snyk-monitor
@@ -243,7 +247,7 @@ Add both deployments as shown below by clicking on "**Add selected workloads**"
 
 Verify both projects were imported
 
-_Note: Ignore the import warning_
+_Note: Ignore the import warning it's just stating it found 0 issues in some of the configuration it serached across _
 
 ![alt tag](https://i.ibb.co/qBcRJrx/snyk-k8s-workshop-8.png)
 
